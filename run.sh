@@ -4,7 +4,7 @@ FLUENTD_ARGS=$FLUENTD_ARGS
 ES_HOST=$ES_HOST
 ES_PORT=9200
 VARLOG_DIR=/varlog
-CONTAINER_DIR=/var/lib/docker/containers
+CONTAINER_DIR=/data/containers
 
 if [ ! -d "$VARLOG_DIR" ]; then
   echo "ERROR: /varlog directory not mounted"
@@ -12,7 +12,7 @@ if [ ! -d "$VARLOG_DIR" ]; then
 fi
 
 if [ ! -d "$CONTAINER_DIR" ]; then
-  echo "ERROR: /var/lib/docker/containers  directory not mounted"
+  echo "ERROR: /data/containers  directory not mounted"
   exit 1
 fi
 
